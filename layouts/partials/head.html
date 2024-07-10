@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<meta name="description" content="">
+
+<link rel="preconnect" href="https://kit.fontawesome.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net/">
+
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}

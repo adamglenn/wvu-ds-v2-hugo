@@ -1,0 +1,18 @@
+title = 'My Cool WVU Website'
+baseURL = 'https://coolsite.wvu.edu/'
+languageCode = 'en-us'
+
+[[menus.main]]
+name = 'Menu'
+pageRef = '/menu'
+weight = 10
+
+[[menus.main]]
+name = 'Drinks'
+pageRef = '/drinks'
+weight = 20
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.116.0"

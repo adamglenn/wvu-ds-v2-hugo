@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="py-5">
+  <div class="container">
+    <div class="col-xl-6 mx-xl-auto">
+      <h1 class="flapjack-regular display-1 text-center mb-5">{{ .Title }}</h1>
+      {{ .Content }}
+      {{ range .Pages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+      {{ end }}
+    </div>
+  </div>
+</main>
+{{ end }}

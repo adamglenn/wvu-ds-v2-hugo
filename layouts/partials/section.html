@@ -1,0 +1,20 @@
+{{ $ariaLabelledBy := .componentName }}
+{{ $landmarkTag := "" }}
+{{ $isMain := "" }}
+{{ if .IsMain }}
+  {{ $isMain = .isMain }}
+{{ end }}
+
+{{ if eq .isMain true }}
+  <main id="{{ .componentName }}" class="py-5">
+    <div class="container">
+      {{ partial "section-list.html" . }}
+    </div>
+  </main>
+{{ else }}
+  <section id="{{ .componentName }}" class="py-5" aria-labelledby="{{ $ariaLabelledBy }}-label">
+    <div class="container">
+      {{ partial "section-list.html" . }}
+    </div>
+  </section>
+{{ end }}

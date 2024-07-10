@@ -1,0 +1,38 @@
+{
+  "author": "adamglenn",
+  "bugs": {
+   "url": "https://github.com/adamglenn/wvu-ds-v2-hugo/issues"
+  },
+  "dependencies": {
+    "@meom/navigation": "1.0.5",
+    "bootstrap": "~5.1",
+    "parvus": "~2.4.0"
+  },
+  "description": "WVU Design System v2 Base Hugo Theme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "~5.1",
+    "sass": "~1.55.0"
+  },
+  "engines": {
+    "node": ">=18.12.1",
+    "npm": ">=8.19.2"
+  },
+  "homepage": "https://github.com/adamglenn/wvu-ds-v2-hugo",
+  "keywords": [
+    "wvu",
+    "hugo"
+  ],
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "name": "gohugo-theme-wvu-ds-v2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamglenn/wvu-ds-v2-hugo.git"
+  },
+  "scripts": {
+    "prepare": "gulp moveJsFiles"
+  },
+  "version": "0.0.1"
+ }
