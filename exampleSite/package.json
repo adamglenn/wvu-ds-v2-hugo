@@ -1,0 +1,29 @@
+{
+  "author": "",
+  "bugs": {
+   "url": ""
+  },
+  "dependencies": {
+    "@meom/navigation": "1.0.5",
+    "parvus": "~2.4.0"
+  },
+  "description": "",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.12.1",
+    "npm": ">=8.19.2"
+  },
+  "homepage": "",
+  "keywords": [
+    "wvu",
+    "hugo"
+  ],
+  "license": "MIT",
+  "name": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/.."
+  },
+  "scripts": {},
+  "version": "0.0.1"
+ }

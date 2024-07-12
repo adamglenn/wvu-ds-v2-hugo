@@ -1,1 +1,7 @@
-Footer
+<footer>
+  Footer
+</footer>
+
+{{- $bootstrap := resources.Get "js/bootstrap.js" | js.Build -}}
+
+<script src="{{ $bootstrap.RelPermalink }}" type="module"></script>

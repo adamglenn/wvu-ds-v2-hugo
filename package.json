@@ -20,7 +20,6 @@
     "hugo"
   ],
   "license": "MIT",
-  "main": "gulpfile.js",
   "name": "gohugo-theme-wvu-ds-v2",
   "repository": {
     "type": "git",
