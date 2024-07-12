@@ -1,1 +1,15 @@
 <script src="https://kit.fontawesome.com/b8c6c2a41e.js" crossorigin="anonymous"></script>
+
+{{- $bootstrap := resources.Get "js/index.js" -}}
+{{- $bootstrapAlertCustom := resources.Get "js/bootstrap-alert--custom.js" -}}
+{{- $meomNavigation := resources.Get "js/vendor/@meom/index.esm.min.js" -}}
+{{- $meomNavigationCustom := resources.Get "js/meom-wvu-site-navigation--custom.js" -}}
+{{- $parvus := resources.Get "js/vendor/parvus/parvus.min.js" -}}
+{{- $parvusGallery := resources.Get "js/parvus-gallery--custom.js" -}}
+
+{{- $scripts := slice $bootstrap $bootstrapAlertCustom $meomNavigation $meomNavigationCustom $parvus $parvusGallery | resources.Concat "js/main.js" -}}
+
+{{- $jsBundle := $scripts | js.Build -}} 
+{{ $jsBundle := $jsBundle | resources.Fingerprint }}
+
+<script defer src="{{ $jsBundle.RelPermalink }}"></script>
