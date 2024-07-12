@@ -11,7 +11,12 @@
     
     {{ block "main" . }}{{ end }}
 
-    {{ partial "footer.html" . }}
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
+
+    {{- $bootstrap := resources.Get "js/bootstrap.js" | js.Build -}}
+    <script src="{{ $bootstrap.RelPermalink }}" type="module"></script>
 
   </body>
 </html>

@@ -1,19 +1,21 @@
 {{ $ariaLabelledBy := .componentName }}
 {{ $landmarkTag := "" }}
 {{ $isMain := "" }}
-{{ if .IsMain }}
-  {{ $isMain = .isMain }}
+{{ if .Params.is_main }}
+  {{ $isMain = .Params.is_main }}
 {{ end }}
+{{ $sectionClasses := "" }}
+{{ $src := "" }}
 
 {{ if eq .isMain true }}
   <main id="{{ .componentName }}" class="py-5">
-    <div class="container">
+    <div class="container position-relative">
       {{ partial "section-list.html" . }}
     </div>
   </main>
 {{ else }}
   <section id="{{ .componentName }}" class="py-5" aria-labelledby="{{ $ariaLabelledBy }}-label">
-    <div class="container">
+    <div class="container position-relative">
       {{ partial "section-list.html" . }}
     </div>
   </section>
